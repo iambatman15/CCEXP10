@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Showcase App</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cloud Web App</h1>
+    <p>Welcome to the demo of cloud computing concepts!</p>
+    <form method="POST" action="/submit">
+      <input type="text" name="data" placeholder="Enter some data" required />
+      <button type="submit">Submit</button>
+    </form>
+    <div class="data-list">
+      <h2>Stored Data</h2>
+      <ul>
+        {% for item in data_list %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
