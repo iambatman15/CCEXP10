@@ -8,19 +8,32 @@
 </head>
 <body>
   <div class="container">
-    <h1>Cloud Web App</h1>
+    <h1>☁️ Cloud Web App</h1>
     <p>Welcome to the demo of cloud computing concepts!</p>
+
+    <!-- Data Submission Form -->
     <form method="POST" action="/submit">
       <input type="text" name="data" placeholder="Enter some data" required />
       <button type="submit">Submit</button>
     </form>
+
+    <!-- Display Stored Data -->
     <div class="data-list">
-      <h2>Stored Data</h2>
+      <h2>📝 Stored Data</h2>
       <ul>
         {% for item in data_list %}
-        <li>{{ item }}</li>
+          <li>{{ item }}</li>
         {% endfor %}
       </ul>
+    </div>
+
+    <!-- File Upload Form -->
+    <div class="upload-section">
+      <h2>📤 Upload File</h2>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+      </form>
     </div>
   </div>
 </body>
